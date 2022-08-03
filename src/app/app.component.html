@@ -1,0 +1,14 @@
+<!-- <app-header></app-header>
+<app-breadcrumb></app-breadcrumb>
+<app-modal #modal [display]="display" [formaPagamentoJson]="array" (aoSalvar)="updateTable($event)"></app-modal>
+<div class="title">{{title}}</div>
+<div class="row buttonDiv">
+  <div class="col-md-6">
+    <input type="text" placeholder="Pesquisar" class="searchInput">
+  </div>
+  <div class="col-md-6">
+    <button type="button" class="myButton" (click)="modal.toggle(0); modal.limparCampos()"><i class="pi pi-plus myIcon"></i><span class="buttonTitle">Adicionar</span></button>
+  </div>
+</div>
+<app-table #table [columnsArray]="columnsArray" (aoClicar)="transferir($event); modal.transferir($event); modal.toggle(0)"></app-table> -->
+<router-outlet></router-outlet>

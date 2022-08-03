@@ -1,0 +1,32 @@
+<p-dialog header="{{title}}" [(visible)]="display" [style]="{ width: '45vw' }">
+  <form (ngSubmit)="saveOrUpdate()" style="padding-top: 15px;">
+      <div class="form-group">
+        <input type="hidden" id="idFormaPagamento" name="idFormaPagamento" [(ngModel)]="idFormaPagamento">
+        <label for="descricao">Nome Forma de Pagamento</label>
+        <input type="text" id="descricao" name="descricao" class="form-control" [(ngModel)]="descricao">
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="status">Situação</label>
+          <select type="text" id="status" name="status" [(ngModel)]="status" class="form-control">
+            <option value="ativo">Ativo</option>
+            <option value="inativo">Inativo</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="tipo">Tipo</label>
+          <select type="text" id="tipo" name="tipo" [(ngModel)]="tipo" class="form-control">
+            <option value="Nenhum">Nenhum</option>
+            <option value="Boleto">Boleto</option>
+            <option value="Cheque">Cheque</option>
+          </select>
+        </div>
+      </div>
+    <div class="row" style="float: right; padding-top: 10px;">
+      <div style="padding-top: 10px;">
+        <span style="padding-right: 10px;"><button type="button" class="btn" (click)="close()">Cancelar</button></span>
+        <button type="submit" class="btn btn-primary" style="background: #2094F0; border: 1px solid #2094F0" ><i class="pi pi-save saveIcon" style="padding-right: 5px;"></i>Salvar</button>
+      </div>
+    </div>
+  </form>
+</p-dialog>
