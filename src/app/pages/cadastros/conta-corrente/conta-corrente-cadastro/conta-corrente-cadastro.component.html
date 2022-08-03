@@ -32,13 +32,12 @@
     </div>
     <div class="form-group col-md-6">
       <label for="limite">Limite</label>
-      <input type="number" id="limite" name="limite" class="form-control" formControlName="limite">
+      <input type="text" id="limite" name="limite" class="form-control" formControlName="limite" currencyMask [options]="{ prefix: 'R$ '}">
       <div *ngIf="formulario.get('limite')?.errors?.['required'] && formulario.get('limit')?.touched">
           Obrigatório
       </div>
     </div>
   </div>
-
   <div class="row" style="float: right; padding-top: 10px;">
     <div style="padding-top: 10px;">
       <span style="padding-right: 10px;"><button type="button" class="btn" (click)="closeDialog()">Cancelar</button></span>

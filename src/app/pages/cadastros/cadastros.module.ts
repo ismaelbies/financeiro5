@@ -3,6 +3,7 @@ import { FormaPagamentoModule } from './forma-pagamento/forma-pagamento.module';
 import { NgModule } from '@angular/core';
 import { DialogService, DynamicDialogConfig, DynamicDialogModule, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { InputMaskModule } from 'primeng/inputmask';
+import { CurrencyMaskModule } from "ng2-currency-mask";
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { InputMaskModule } from 'primeng/inputmask';
     FormaPagamentoModule,
     ContaCorrenteModule,
     DynamicDialogModule,
-    InputMaskModule
+    InputMaskModule,
+    CurrencyMaskModule
   ],
   providers: [
     DialogService,
