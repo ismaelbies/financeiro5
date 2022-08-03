@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { DialogService, DynamicDialogConfig, DynamicDialogModule, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { InputMaskModule } from 'primeng/inputmask';
 import { CurrencyMaskModule } from "ng2-currency-mask";
+import { CartaoCreditoModule } from './cartao-credito/cartao-credito.module';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { CurrencyMaskModule } from "ng2-currency-mask";
   imports: [
     FormaPagamentoModule,
     ContaCorrenteModule,
+    CartaoCreditoModule,
     DynamicDialogModule,
     InputMaskModule,
     CurrencyMaskModule
