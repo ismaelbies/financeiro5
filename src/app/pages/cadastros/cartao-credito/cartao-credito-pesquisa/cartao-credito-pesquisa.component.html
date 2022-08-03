@@ -14,18 +14,16 @@
     <ng-template pTemplate="header">
       <tr id="myTr">
         <th class="text-center">Nome</th>
-        <th class="text-center">Banco</th>
-        <th class="text-center">Agência</th>
-        <th class="text-center">Conta Corrente</th>
+        <th class="text-center">Bandeira</th>
+        <th class="text-center">Limite</th>
         <th></th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" id="tableBody" let-array let-columns="columnsArray">
         <tr>
         <td class="text-center">{{array.nome}}</td>
-        <td class="text-center">{{array.banco.nome}}</td>
-        <td class="text-center">{{array.agencia}}</td>
-        <td class="text-center">{{array.contaCorrente}}</td>
+        <td class="text-center">{{array.bandeira}}</td>
+        <td class="text-center">{{array.valorLimiteCredito}}</td>
         <td style="float: right">
           <i style="padding-right: 10px; color: #2094F0" class="fa fa-pencil-square-o" title="Editar {{array.nome}}" (click)="openDialog(array.idContaCorrente)"></i>
           <i style="color: red; padding-right: 10px" class="fa fa-trash-o" title="Deletar {{array.nome}}" (click)="deleteRow(array)"></i>
