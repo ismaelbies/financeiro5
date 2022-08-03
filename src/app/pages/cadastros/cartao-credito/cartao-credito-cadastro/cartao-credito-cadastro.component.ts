@@ -3,7 +3,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DynamicDialogRef, DynamicDialogConfig } from 'primeng/dynamicdialog';
 import { CartaoCredito } from 'src/app/models/cartao-credito';
+import { ContaCorrente } from 'src/app/models/conta-corrente';
 import { CartaoCreditoService } from 'src/app/service/cartao-credito.service';
+import { ContaCorrenteService } from 'src/app/service/conta-corrente.service';
 
 @Component({
   selector: 'app-cartao-credito-cadastro',
@@ -13,10 +15,12 @@ import { CartaoCreditoService } from 'src/app/service/cartao-credito.service';
 export class CartaoCreditoCadastroComponent implements OnInit {
 
   private cartaoCredito = {} as any;
+  private contaCorrenteArray: ContaCorrente[] = [];
   formulario!: FormGroup;
 
   constructor(
     private cartaoCreditoService: CartaoCreditoService,
+    private contaCorrenteService: ContaCorrenteService,
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
@@ -26,6 +30,7 @@ export class CartaoCreditoCadastroComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm();
+    this.getContaCorrente();
     console.log(this.config.data.id);
     if (this.config.data.id > 0) {
       this.getCartaoCreditoById(this.config.data.id);
@@ -56,6 +61,12 @@ export class CartaoCreditoCadastroComponent implements OnInit {
       this.formulario.patchValue(cartaoCredito);
       console.log(this.formulario);
     });
+  }
+
+  getContaCorrente() {
+    this.contaCorrenteService.findAll().subscribe((contas: ContaCorrente[]) => {
+      this.contaCorrenteArray = contas;
+    })
   }
 
   public saveOrUpdate() {
