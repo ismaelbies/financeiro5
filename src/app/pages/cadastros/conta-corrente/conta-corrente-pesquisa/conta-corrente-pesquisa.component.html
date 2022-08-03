@@ -26,7 +26,7 @@
         <td class="text-center">{{array.banco.nome}}</td>
         <td class="text-center">{{array.agencia}}</td>
         <td class="text-center">{{array.contaCorrente}}</td>
-          <td style="float: right">
+        <td style="float: right">
           <i style="padding-right: 10px; color: #2094F0" class="fa fa-pencil-square-o" title="Editar {{array.nome}}" (click)="openDialog(array.idContaCorrente)"></i>
           <i style="color: red; padding-right: 10px" class="fa fa-trash-o" title="Deletar {{array.nome}}" (click)="deleteRow(array)"></i>
           <i style="color: darkblue" class="fa fa-info-circle" title="Mostrar Detalhes {{array.nome}}" (click)="mostrarDetalhes(array)"></i>

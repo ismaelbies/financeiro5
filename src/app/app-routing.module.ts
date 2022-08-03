@@ -5,6 +5,7 @@ import { FormaPagamentoCadastroComponent } from './pages/cadastros/forma-pagamen
 import { FormaPagamentoPesquisaComponent } from './pages/cadastros/forma-pagamento/forma-pagamento-pesquisa/forma-pagamento-pesquisa.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CartaoCreditoPesquisaComponent } from './pages/cadastros/cartao-credito/cartao-credito-pesquisa/cartao-credito-pesquisa.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,11 @@ const routes: Routes = [
   {
     path: 'cadastros/conta-corrente',
     component: ContaCorrentePesquisaComponent
+    // loadChildren: () => import('./pages/cadastros2/cadastros2.module').then((m) => m.Cadastros2Module),
+  },
+  {
+    path: 'cadastros/cartao-credito',
+    component: CartaoCreditoPesquisaComponent
     // loadChildren: () => import('./pages/cadastros2/cadastros2.module').then((m) => m.Cadastros2Module),
   },
 ];

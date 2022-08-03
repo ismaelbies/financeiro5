@@ -16,17 +16,17 @@
         <th style="width: 80px;">Situação</th>
         <th style="width: 80px;">Código</th>
         <th style="width: 850px;">Descrição</th>
-        <th></th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" id="tableBody" let-array let-columns="columnsArray">
         <tr>
           <td class="text-center"><i id="icon" class="pi pi-circle-fill" style="color: #33B83B;"></i></td>
           <td class="text-center">{{array.idTipoFormaPagamento}}</td>
-          <td class="text-left">{{array.descricao}}</td>
-            <td style="float: right">
-            <i style="padding-right: 30px; color: #2094F0" class="fa fa-pencil-square-o" (click)="openDialog(array.idTipoFormaPagamento)"></i>
-            <i style="color: red" class="fa fa-trash-o" (click)="deleteRow($event, array)"></i>
+          <td class="text-left">{{array.descricao}}
+            <div style="float: right;">
+              <i style="padding-right: 30px; color: #2094F0" class="fa fa-pencil-square-o" (click)="openDialog(array.idTipoFormaPagamento)"></i>
+              <i style="color: red" class="fa fa-trash-o" (click)="deleteRow($event, array)"></i>
+            </div>
           </td>
         </tr>
     </ng-template>

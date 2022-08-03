@@ -12,7 +12,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule } from '@angular/forms';
-import { HomeComponent } from './home/home.component';
 import { InputMaskModule } from 'primeng/inputmask';
 
 @NgModule({
@@ -20,7 +19,6 @@ import { InputMaskModule } from 'primeng/inputmask';
     AppComponent,
     HeaderComponent,
     BreadcrumbComponent,
-    HomeComponent,
   ],
   imports: [
     BrowserModule,
