@@ -9,7 +9,6 @@ import { CartaoCredito } from '../models/cartao-credito';
 })
 export class CartaoCreditoService {
 
-  private bancoArray:Array<CartaoCredito> = [];
   private url = environment.urlApi + "/cartaocredito";
   private token: string = environment.token;
 
