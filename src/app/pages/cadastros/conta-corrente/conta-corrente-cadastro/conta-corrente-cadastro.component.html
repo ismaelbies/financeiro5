@@ -32,7 +32,7 @@
     </div>
     <div class="form-group col-md-6">
       <label for="limite">Limite</label>
-      <input type="text" id="limite" name="limite" class="form-control" formControlName="limite" currencyMask [options]="{ prefix: 'R$ '}">
+      <input type="number" id="limite" name="limite" class="form-control" formControlName="limite">
       <div *ngIf="formulario.get('limite')?.errors?.['required'] && formulario.get('limit')?.touched">
           Obrigatório
       </div>
@@ -44,5 +44,5 @@
       <button type="submit" class="btn btn-primary" style="background: #2094F0; border: 1px solid #2094F0" ><i class="pi pi-save saveIcon" style="padding-right: 5px;"></i>Salvar</button>
     </div>
   </div>
-  <span>* campos obrigatorios em vermelhor</span>
+  <span style="color: red;">* campos obrigatorios em vermelhor</span>
 </form>

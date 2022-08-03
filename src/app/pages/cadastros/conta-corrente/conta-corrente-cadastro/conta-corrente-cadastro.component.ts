@@ -100,6 +100,8 @@ export class ContaCorrenteCadastroComponent implements OnInit {
   }
 
   public createContaCorrente(isUpdate: boolean) {
+    const str = this.formulario.get('limite')?.value;
+    const subStr = 'R$ ';
     this.contaCorrente = {
       idContaCorrente: isUpdate ? this.formulario.get('idContaCorrente')?.value : null,
       nome: this.formulario.get('nome')?.value,
