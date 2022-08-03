@@ -23,9 +23,9 @@ export class CartaoCreditoService {
     return this.httpClient.get<CartaoCredito[]>(this.url, {headers: headers});
   }
 
-  findById(cartaoCredito: CartaoCredito): Observable<CartaoCredito> {
+  findById(idCartaoCredito: number): Observable<CartaoCredito> {
     const headers = this.insertHeaders();
-    const urlWithId = this.url.concat(`/${cartaoCredito.idCartaoCredito}`);
+    const urlWithId = this.url.concat(`/${idCartaoCredito}`);
     return this.httpClient.get<CartaoCredito>(urlWithId, {headers: headers});
   }
 

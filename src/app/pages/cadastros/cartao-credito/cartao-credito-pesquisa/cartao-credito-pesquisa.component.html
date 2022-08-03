@@ -38,8 +38,8 @@
   </div>
 </div>
 
-<!-- <p-dialog [(visible)]="displayDeleteModal" [style]="{ width: '30vw' }" styleClass="overlayDialog">
-  <form (submit)="deleteConta()">
+<p-dialog [(visible)]="displayDeleteModal" [style]="{ width: '30vw' }" styleClass="overlayDialog">
+  <form (submit)="deleteCartaoCredito()">
       <div class="form-group text-center" style="padding-bottom: 40px;">
         <input type="hidden" id="idTipoFormaPagamento" name="idTipoFormaPagamento">
         <div style="padding-bottom: 30px">
@@ -60,13 +60,13 @@
 
 <p-dialog header="{{detailsModalTitle}}" [(visible)]="displayDetailsModal" [style]="{ width: '50vw' }" styleClass="overlayDialog">
     <div class="row" style="padding-top: 15px;">
-      <span style="padding-bottom: 5px;"><b>Nome:</b> {{this.conta.nome}}</span>
+      <!-- <span style="padding-bottom: 5px;"><b>Nome:</b> {{this.conta.nome}}</span>
       <span style="padding-bottom: 5px;"><b>Banco:</b> {{this.banco.nome}}</span>
       <span style="padding-bottom: 5px;"><b>Agência:</b> {{this.conta.agencia}}</span>
       <span style="padding-bottom: 5px;"><b>Conta Corrente:</b> {{this.conta.contaCorrente}}</span>
       <span style="padding-bottom: 5px;"><b>Limite:</b> {{this.conta.limite}}</span>
-      <span style="padding-bottom: 5px;"><b>Poupança:</b> {{this.conta.poupanca == true ? 'Sim' : 'Não'}}</span>
+      <span style="padding-bottom: 5px;"><b>Poupança:</b> {{this.conta.poupanca == true ? 'Sim' : 'Não'}}</span> -->
     </div>
-</p-dialog> -->
+</p-dialog>
 
 
